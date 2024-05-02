@@ -8,11 +8,13 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt install opam
+        opam init
         opam install depext
         opam depext frama-c
         opam install frama-c
         opam install why3 why3-ide alt-ergo
         why3 config detect
         why3 config list-provers
+        
     - name: Run Frama-C
       run: frama-c -wp maxint.c
