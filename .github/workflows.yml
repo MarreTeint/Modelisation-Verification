@@ -1,0 +1,23 @@
+name: Frama-C
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: sudo apt install opam
+      run: opam install depext
+      run: opam depext frama-c
+      run: opam install frama-c
+      run: opam install why3 why3-ide alt-ergo
+      run: why3 config detect
+      run: why3 config list-provers
+
+    - name: Run Frama-C
+      run: frama-c -wp maxint.c
