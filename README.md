@@ -1,4 +1,7 @@
 # Modelisation-Verification
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![Frama-C](https://img.shields.io/badge/Frama--C-00599C?style=for-the-badge&logo=frama-c&logoColor=white)
+
 
 ## Proof of programs -- Mini-Project
 
@@ -60,8 +63,8 @@ z3 --version
 ```
 Après l'installation, n'oubliez pas d'exécuter
 ```shell
-why3 config --detect
- why3 --list-provers
+why3 config detect
+why3 config list-provers
 ```
 
 ## Tools
