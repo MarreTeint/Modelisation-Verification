@@ -9,10 +9,10 @@ jobs:
       run: |
         sudo apt update
         sudo apt install opam
-        opam init
-        opam install --deps-only frama-c
-        opam install frama-c
-        opam install why3 why3-ide alt-ergo
+        opam init -y
+        opam install --deps-only frama-c -y
+        opam install frama-c -y
+        opam install why3 why3-ide alt-ergo -y
         why3 config detect
         why3 config list-provers
         
