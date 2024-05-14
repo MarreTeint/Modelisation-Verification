@@ -9,8 +9,8 @@ jobs:
       run: |
         sudo apt install opam
         opam init
-        opam install frama-c --yes
-        opam install why3 why3-ide alt-ergo --yes
+        opam install --yes frama-c
+        opam install --yes why3 why3-ide alt-ergo
         why3 config detect
         why3 config list-provers
         
