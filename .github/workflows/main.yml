@@ -7,12 +7,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install dependencies
       run: |
-        sudo apt update
         sudo apt install opam
-        opam init -y
-        opam install --deps-only frama-c -y
-        opam install frama-c -y
-        opam install why3 why3-ide alt-ergo -y
+        opam init
+        opam install frama-c
+        opam install why3 why3-ide alt-ergo
         why3 config detect
         why3 config list-provers
         
