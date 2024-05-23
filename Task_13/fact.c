@@ -11,8 +11,8 @@ int fact (int n) {
  int y = 1;
  int x = n;
  /*@ 
-      @ loop invariant 1 <= x <= n + 1;
-      @ loop invariant y == Fact(n) / Fact(x - 1);
+      @ loop invariant 1 <= x <= n;
+      @ loop invariant y * Fact(x) == Fact(n);
       @ loop assigns y, x;
       @ loop variant x;
       @*/
