@@ -1,6 +1,6 @@
 /*@
     requires \valid(t + (0..n-1)) && n > 0;
-    ensures 0 <= \result < n && \forall integer i; 0 <= i < n ==> t[\result] <= t[i];
+    ensures 0 <= \result < n && \forall integer i; 0 <= i < n ==> t[\result] >= t[i];
 */
 int getIndexMax(int t[], int n) {
     int maxIndex = 0; // Initialize index of maximum element

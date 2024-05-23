@@ -19,7 +19,7 @@ int loop1(int x){
 int loop2(int x){
  int  n=x;
  /*@  
-    loop invariant n < 100;
+    loop invariant n <= 100;
     loop assigns n;
     loop variant 100 - n;
  */
@@ -35,7 +35,7 @@ int loop3(int x){
  return 100;
  else {
  /*@  
-     loop invariant n < 100 ;
+     loop invariant n <= 100 ;
      loop assigns n ;
      loop variant 100 - n;
  */

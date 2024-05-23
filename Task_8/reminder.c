@@ -1,12 +1,12 @@
 /*@
-    requires b > 0;                                 
+    requires b > 0;
     ensures 0 <= \result < b;
     ensures \exists integer q; a == b * q + \result;
 */
 int rem(int a, int b) {
     /*@
-        loop invariant a < b;
-        loop invariant 0 <= a < b * (\at(a, Pre)/b + 1);
+        loop invariant a >= 0;
+        loop invariant \exists integer k; \at(a, Pre) == b * k + a;
         loop assigns a;
         loop variant a;
     */
