@@ -1,6 +1,7 @@
+#include <limits.h>
 /*@
-   requires a > -2147483648;
-   ensures \result == (a < 0 ? -a : a);
+   requires a > INT_MIN;
+   ensures \result == \abs(a);
  */
 int abs (int  a){
     int aux = a;
