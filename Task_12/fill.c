@@ -6,7 +6,8 @@ ensures \forall integer i; 0 <= i < n ==> a[i] == val;
 void fill( int* a, int n, int val)
 {
 /*@
-loop invariant 0 <= i < n;
+loop invariant 0 <= i <= n;
+loop invariant \forall integer j; 0 <= j < i ==> a[j] == val;
 loop assigns i, a[0..n-1];
 loop variant n - i ;
 */
